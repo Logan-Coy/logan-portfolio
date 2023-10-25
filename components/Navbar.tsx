@@ -11,17 +11,12 @@ function Navbar() {
   return (
     <nav
       aria-label="primary menu"
-      className="w-full flex py-6 justify-between items-center px-4 md:px-8 lg:px-16 shadow-lg fixed z-0 bg-slate-800"
+      className="w-full flex py-6 justify-between items-center px-4 md:px-8 lg:px-16 shadow-xl bg-slate-800"
     >
-      <div className="w-[40%] sm:w-[25%] md:w-[20%] lg:w-[15%]">
-        <Image
-          className="w-full h-auto"
-          src={logoW}
-          alt="logan logo"
-          height={230}
-          width={960}
-          sizes="(min-width: 1200px) calc(20vw - 26px), calc(19.2vw - 4px)"
-        />
+      <div className="">
+        <h1 className="text-white font-montserrat text-2xl sm:text-3xl">
+          <a href="">&#123; logan_coy &#125;</a>
+        </h1>
       </div>
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">

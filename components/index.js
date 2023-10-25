@@ -1,3 +1,6 @@
 import Navbar from "./Navbar";
+import About from "./About";
+import Projects from "./Projects";
+import ProjectCard from "./ProjectCard";
 
-export { Navbar };
+export { Navbar, About, Projects, ProjectCard };
