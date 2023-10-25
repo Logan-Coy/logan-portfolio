@@ -1,9 +1,11 @@
-import { Navbar } from "@components";
+import { Navbar, About, Projects } from "@components";
 
 const App = () => {
   return (
     <>
       <Navbar />
+      <About />
+      <Projects />
     </>
   );
 };
