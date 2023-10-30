@@ -7,6 +7,8 @@ import contact from "@public/assets/contact.png";
 import loganHeadshot from "@public/assets/loganHeadshot.jpg";
 import linkedinBlue from "@public/assets/linkedinBlue.svg";
 import githubBlue from "@public/assets/githubBlue.svg";
+import linkedinWhite from "@public/assets/linkedinWhite.svg";
+import githubWhite from "@public/assets/githubWhite.svg";
 
 import html from "@public/assets/html.svg";
 import css from "@public/assets/css.svg";
@@ -51,4 +53,6 @@ export {
   link,
   linkedinBlue,
   githubBlue,
+  linkedinWhite,
+  githubWhite,
 };
