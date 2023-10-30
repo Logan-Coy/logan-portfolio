@@ -37,7 +37,7 @@ function About() {
               </p>
               <p className="pb-4">
                 <span className="font-semibold">Email: </span>
-                <span>logan@logancoydev.com</span>
+                <span>logan@logancoy.dev</span>
               </p>
               <p className="pb-4">
                 <span className="font-semibold">Location: </span>
