@@ -1,8 +1,10 @@
+"use client";
+
 import { github, link } from "@utils/images";
 import Image from "next/image";
 import { Fragment } from "react";
 
-import { projectData } from "@constants";
+import { useState } from "react";
 
 interface ProjectCardProps {
   imgSrc: any;
@@ -33,6 +35,8 @@ function ProjectCard({
         {paragraph}
       </p>
     ));
+
+  const [toggle, setToggle] = useState(false);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-[90%] md:w-[80%] xl:w-[70%] p-2 xs:p-8 bg-white shadow-md rounded-xl place-items-center my-6 mb-16">
@@ -80,9 +84,37 @@ function ProjectCard({
       </div>
 
       {/* right col */}
-      <div className="p-2 m-2">
+      <div className="m-2">
         {/* description */}
-        <div className="font-montserrat text-xl font-light">{paragraphs}</div>
+        <div
+          className={`${
+            toggle ? "" : "max-h-[200px] overflow-hidden lg:max-h-full"
+          } relative font-montserrat text-xl font-light leading-[30px]`}
+          onClick={() => {
+            setToggle((prev) => !prev);
+          }}
+        >
+          <div
+            className={`${
+              toggle
+                ? "hidden"
+                : "absolute bottom-0 left-0 w-full h-[75px] bg-gradient-to-b from-transparent to-white lg:hidden"
+            }`}
+          ></div>
+          {paragraphs}
+        </div>
+
+        <div
+          className="flex justify-center pt-4"
+          onClick={() => {
+            setToggle((prev) => !prev);
+          }}
+        >
+          <h4 className="font-montserrat text-lg tracking-wider text-slate-800 lg:hidden">
+            {toggle ? "Read Less" : "Read More"}
+            <div className="border-b-2 border w-[80%] border-emerald-300 mx-auto rounded-md"></div>
+          </h4>
+        </div>
 
         {/* bottom link button */}
         <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center mt-8">

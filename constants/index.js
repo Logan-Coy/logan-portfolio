@@ -97,15 +97,15 @@ export const projectData = [
     scrollPercent: -78,
     imgAlt: "screenshot of website",
     skills: [
+      { icon: next, name: "next icon" },
       { icon: react, name: "react icon" },
       { icon: tailwind, name: "tailwind icon" },
       { icon: typeScript, name: "typeScript icon" },
       { icon: s3, name: "s3 icon" },
-      { icon: next, name: "next icon" },
       { icon: node, name: "node icon" },
       { icon: git, name: "git icon" },
       { icon: photoShop, name: "photoShop icon" },
     ],
-    description: `Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.\n Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Porttitor at sem.\n Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.`,
+    description: `I created a dynamic single-page website to beautifully showcase my mother's photography business. Using AWS S3 bucket, the site hosts a collection of her high-resolution photographs, with an aim to attract and convert potential clients.\n The website features an interactive contact form enabling potential clients to seamlessly connect with her. Submissions are forwarded directly to her inbox, ensuring swift and efficient communication. The site is designed with responsiveness in mind, offering an optimal viewing experience across devices.\n Additionally, I implemented a secure admin page with NextAuth.js, allowing my mother to effortlessly manage her portfolio by uploading new photos and removing outdated ones from the S3 bucket. This project not only demonstrates my technical proficiency but also my background in Marketing by designing an engaging platform to attract clients.`,
   },
 ];

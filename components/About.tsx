@@ -1,9 +1,14 @@
+"use client";
+import { useState } from "react";
+
 import { loganHeadshot, githubBlue, linkedinBlue } from "@utils/images";
 import Image from "next/image";
 import { skillsData } from "@constants";
 import { Fragment } from "react";
 
 function About() {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <section id="about" className="bg-stone-100 py-10 flex justify-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 w-[90%] md:w-[80%] xl:w-[70%] p-2 xs:p-8 bg-white shadow-md rounded-xl place-items-center ">
@@ -46,7 +51,7 @@ function About() {
                   >
                     <Image
                       src={linkedinBlue}
-                      alt="linkedIn Icon"
+                      alt="LinkedIn Icon"
                       height={40}
                       width={40}
                       className="hover:scale-105"
@@ -57,7 +62,7 @@ function About() {
                   <a target="_blank" href="https://github.com/Logan-Coy">
                     <Image
                       src={githubBlue}
-                      alt="linkedIn Icon"
+                      alt="GitHub Icon"
                       height={40}
                       width={40}
                       className="hover:scale-105"
@@ -98,24 +103,52 @@ function About() {
             About me
             <div className="border-b-4 border w-[110px] border-emerald-300 mt-2 rounded-md"></div>
           </h2>
-          <div className="font-montserrat text-xl font-light">
+          <div
+            className={`${
+              toggle ? "" : "max-h-[200px] overflow-hidden lg:max-h-full"
+            } relative font-montserrat text-xl font-light leading-[30px]`}
+            onClick={() => {
+              setToggle((prev) => !prev);
+            }}
+          >
+            <div
+              className={`${
+                toggle
+                  ? "hidden"
+                  : "absolute bottom-0 left-0 w-full h-[75px] bg-gradient-to-b from-transparent to-white lg:hidden"
+              }`}
+            ></div>
             <p className="mt-4">
-              Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-              Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-              Praesent sapien massa, convallis a pellentesque nec, egestas non
-              nisi. Nulla porttitor accumsan tincidunt.
+              Hi, I&rsquo;m Logan Coy, a self-taught full-stack developer based
+              in Akron, Ohio. I blend technical expertise in JavaScript,
+              TypeScript, React, and more with a keen eye for design. My passion
+              lies in crafting beautiful, functional websites and applications.
             </p>
             <p className="mt-4">
-              Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-              Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum
-              ac diam sit amet quam vehicula elementum sed sit amet dui.
-              porttitor at sem.
+              With a background in marketing and a year of experience in
+              front-end development, I bring a unique perspective to my
+              projects. I&rsquo;m a quick learner, a creative problem-solver,
+              and deeply curious about all things tech.
             </p>
             <p className="mt-4">
-              Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut
-              lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt.
-              Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+              Outside of coding, I&rsquo;m fascinated by the synergy of form and
+              function, which extends to my love for cars. I have a knack for
+              optimizing solutions and enjoy challenges that push my boundaries.
             </p>
+            <p className="mt-4">
+              Let&rsquo;s create something exceptional together!
+            </p>
+          </div>
+          <div
+            className="flex justify-center pt-4"
+            onClick={() => {
+              setToggle((prev) => !prev);
+            }}
+          >
+            <h4 className="font-montserrat text-lg tracking-wider text-slate-800 lg:hidden">
+              {toggle ? "Read Less" : "Read More"}
+              <div className="border-b-2 border w-[80%] border-emerald-300 mx-auto rounded-md"></div>
+            </h4>
           </div>
         </div>
       </div>

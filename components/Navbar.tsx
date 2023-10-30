@@ -14,7 +14,7 @@ function Navbar() {
       className="w-full flex py-6 justify-between items-center px-4 md:px-8 lg:px-16 shadow-xl bg-slate-800"
     >
       <div className="">
-        <h1 className="text-white font-montserrat text-2xl sm:text-3xl">
+        <h1 className="text-white font-montserrat text-2xl sm:text-3xl hover:scale-105">
           <a href="">&#123; logan_coy &#125;</a>
         </h1>
       </div>
